@@ -1,0 +1,195 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+<title>	WHERE DO YOU LEAVE?</title>
+</head>
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navMENU">
+<ul>
+
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">TEA </a></li>
+    <li><a href="#">MENU</a></li>
+    <li><a href="#">CONTACT</a></li>
+    <li><a href="#">PRODUCTS</a></li>
+
+</ul>
+</div>
+</body>
+
+       <body style="background-color: LIGHTBLUE;">
+        
+        <h1 style="color:BLACK;font-size:40px"> GARMUR PLACE</h1>
+	  <p>THE ACOMMODATION IS R1 700 EVERY MONTHS </p>
+           <img src="http://www.safarinow.com/db/id/1391040/g371279.jpg"/>
+           <img src="http://www.safarinow.com/db/id/1391040/g371271.jpg"/>
+           <img src="http://www.safarinow.com/db/id/1391040/g371280.jpg"/>
+           <img src="http://www.safarinow.com/db/id/1391040/g371275.jpg"/>
+           <ol>
+              <h2 style="color:black;font-size:30px">RESOURCES</h2>
+              <li>Laundry Facilities</li>
+              <li>Satellite TV</li>
+              <li>ADSL Internet</li>
+              <li>On-site Parking</li
+          </ol>
+          <ul>
+              <h3 style="color:black;font-size:30px">ACCOMODATION TYPE</h3>
+              <li>Hotel</li>
+          </ul>
+  <title>Html calculator</title>
+</head>
+<body>
+<form name="calculator" >
+Solution<input type="textfield" name="ans" value="">
+<br>
+<input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+<input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+<input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+<input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+<br>
+<input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+<input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+<input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+<input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+<br>
+<input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+<input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+<input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+<input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+<input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+<br>
+<input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+<input type="reset" value="Reset">
+<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+</form>
+</body>
+       <html>
+    <head>
+        <script>
+            function startTime()
+            {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                // Add a zero in front of numbers<10
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML =
+                    today.getDate() +
+                    "-" +
+                    (today.getMonth()+1)+"-" +
+                    today.getFullYear() +
+                    " "+h+":"+m+":"+s;
+                t = setTimeout(function(){startTime()},500);
+            }
+
+            function checkTime(i)
+            {
+                if (i<10)
+                {
+                    i = "0" + i;
+                }
+                return i;
+            }
+        </script>
+    </head>
+
+    <body onload="startTime()">
+        <div id="txt"></div>
+    </body>
+</html>
+<html>
+<head>
+<title></title>
+<style>
+.Question {background-color:yellow;}
+</style>
+<script>
+correctAnswers=[0,1,2,1];
+var AnsweredCorrectly=0;
+function start(){
+document.getElementById('quizstart').style.display="none";
+document.getElementById('question0').style.display="block";
+}
+function toggle(a,b){
+AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?1:0);
+document.getElementById('question'+a).style.display="none";
+document.getElementById('question'+b).style.display="block";
+}
+function end(a){
+AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?1:0);
+document.getElementById('question'+a).style.display="none";
+document.getElementById('summary').style.display="block";
+document.getElementById('result').innerHTML=AnsweredCorrectly;
+}
+</script>
+
+</head>
+<body>
+<h1>GRAMMAR SLAMMER</h1>
+<div id="quizstart">
+    <button onclick="start()">START</button>
+</div>
+<div id="question0" style="display:none">
+<span class="question">Do chickens have legs?</span><br>
+<input type="radio" name="ans0">Yes<br>
+<input type="radio" name="ans0">No<br>
+   <button onclick="toggle(0,1)">continue</button>
+</div>
+<div id="question1" style="display:none">
+<span class="question">How many wings do they have?</span><br>
+<input type="radio" name="ans1">1<br>
+<input type="radio" name="ans1">2<br>
+<input type="radio" name="ans1">3<br>
+   <button onclick="toggle(1,2)">continue</button>
+</div>
+<div id="question2" style="display:none">
+<span class="question">Which is not a color?</span><br>
+<input type="radio" name="ans2">blue<br>
+<input type="radio" name="ans2">purple<br>
+<input type="radio" name="ans2">car<br>
+   <button onclick="toggle(2,3)">continue</button>
+</div>
+<div id="question3" style="display:none">
+<span class="question">Is Yen the american currency?</span><br>
+<input type="radio" name="ans3">Yes<br>
+<input type="radio" name="ans3">No<br>
+   <button onclick="end(3)">continue</button>
+</div>
+<div id="summary" style="display:none">
+you have <span id="result"></span> correct answers
+</div>
+</body>
+<form action="action_page.php">
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+
+
+
+        </body>
+</html>
+
+        </body>
+</html>
+
+        </body>
+</html>
